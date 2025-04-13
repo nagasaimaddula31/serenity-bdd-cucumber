@@ -16,3 +16,4 @@ set TIMESTAMP=%DATE:~10,4%%DATE:~4,2%%DATE:~7,2%_%TIME:~0,2%%TIME:~3,2%%TIME:~6,
 set TIMESTAMP=%TIMESTAMP: =0%
 mvn clean verify -Dreport.folder=Run_%TIMESTAMP% -Dwebdriver.driver=chrome
 
+nagasai
