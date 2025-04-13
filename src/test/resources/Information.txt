@@ -1,0 +1,18 @@
+1)Run in chrome
+mvn clean verify -Dwebdriver.driver=chrome
+
+2)Run in firefox
+mvn clean verify -Dwebdriver.driver=firefox
+
+3)Run in edge
+mvn clean verify -Dwebdriver.driver=edge
+
+4)To generate reports in specific folder
+
+ write this in serenity.conf -> outputDirectory = "target/serenity-reports/${report.folder}" 
+ 
+Run below command for windows  
+set TIMESTAMP=%DATE:~10,4%%DATE:~4,2%%DATE:~7,2%_%TIME:~0,2%%TIME:~3,2%%TIME:~6,2%
+set TIMESTAMP=%TIMESTAMP: =0%
+mvn clean verify -Dreport.folder=Run_%TIMESTAMP% -Dwebdriver.driver=chrome
+
